@@ -9,7 +9,16 @@ const NavRoot = (props) => {
   const Stack = createStackNavigator();
   return (
     <Stack.Navigator initialRouteName="Splash">
-        <Stack.Screen name="Splash">
+        <Stack.Screen name="Splash" options={{
+          title: 'codename:Shitake',
+          headerStyle: {
+            backgroundColor: '#ff7247',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}>
           {(props) => <Splash {...props} />}
         </Stack.Screen>
         <Stack.Screen name="Login">

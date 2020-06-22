@@ -23,7 +23,6 @@ function App() {
         : 
         <View style={WelcomeStyle.container}>
         <NavRoot/> 
-        <Text>Welcome to codename:Shitake!</Text>
         </View>
         }
     </NavigationContainer>
