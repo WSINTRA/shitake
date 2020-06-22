@@ -12,7 +12,7 @@ function CustomButton(props) {
       style={[Button.box, {backgroundColor: color, width: width}]}
       onPress={() => navigation.navigate(route)}
     >
-      <Text>{title}</Text>
+      <Text style={Button.label}>{title}</Text>
     </TouchableHighlight>
   );
 }
