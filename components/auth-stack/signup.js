@@ -4,8 +4,8 @@ import { WelcomeStyle } from '../../styles/global';
 
 const Signup = () => {
     return (
-        <View style={WelcomeStyle.container} >
-            <Text> Signup Form For existing users</Text>
+        <View >
+            <Text> Signup Form For new users</Text>
         </View>
     )
 }

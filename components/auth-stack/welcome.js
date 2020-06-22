@@ -1,21 +1,20 @@
 import React, { useState } from "react";
-import { View, Text, Input } from "react-native";
-import { WelcomeStyle } from "../../styles/global";
+import { createStackNavigator } from "@react-navigation/stack";
 import Login from "./login";
 import Signup from "./signup";
 
-const Welcome = () => {
-  const [switchForm, setSwitchFrom] = useState(false);
+const Welcome = (props) => {
+  //   const [switchForm, setSwitchFrom] = useState(false);
+  const Stack = createStackNavigator();
   return (
-    <View style={WelcomeStyle.container}>
-      <Text> Welcom Screen </Text>
-      {switchForm 
-      ? 
-      <Signup /> 
-      : 
-      <Login />
-      }
-    </View>
+    <Stack.Navigator>
+        <Stack.Screen name="Login">
+          {(props) => <Login {...props} />}
+        </Stack.Screen>
+        <Stack.Screen name="Signup">
+          {(props) => <Signup {...props} />}
+        </Stack.Screen>
+    </Stack.Navigator>
   );
 };
 export default Welcome;

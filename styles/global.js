@@ -6,6 +6,7 @@ export const WelcomeStyle = StyleSheet.create({
         //helps when plotting out the components
         borderStyle: 'solid',
         borderWidth: 3,
+        height:500
     }
 
 })

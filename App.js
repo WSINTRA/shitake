@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { WelcomeStyle } from "./styles/global";
 import Welcome from './components/auth-stack/welcome';
+
 
 function HomeScreen() {
   return (
@@ -12,21 +13,18 @@ function HomeScreen() {
   );
 }
 
-const Stack = createStackNavigator();
-
 function App() {
-  const [count, setCount] = useState(0);
   const [authenticated, setAuthenticated] = useState(false);
+
   return (
     <NavigationContainer>
-      <Stack.Navigator>
         {authenticated ? 
-        <Stack.Screen name="Home" component={HomeScreen} /> 
-        :
-        <Stack.Screen name="auth-stack" component={ Welcome } /> 
+        <HomeScreen/> 
+        : 
+        <View style={WelcomeStyle.container}>
+        <Welcome/> 
+        </View>
         }
-       
-      </Stack.Navigator>
     </NavigationContainer>
   );
 }
