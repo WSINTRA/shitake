@@ -3,7 +3,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Login from "./login";
 import Signup from "./signup";
 import Splash from './splash';
-import {eggShell, deepChestnut} from '../../styles/colors';
+import {androidGreen, deepChestnut, hunterGreen} from '../../styles/colors';
 const NavRoot = (props) => {
   //   const [switchForm, setSwitchFrom] = useState(false);
   const Stack = createStackNavigator();
@@ -12,9 +12,9 @@ const NavRoot = (props) => {
         <Stack.Screen name="Splash" options={{
           title: 'codename:Shitake',
           headerStyle: {
-            backgroundColor: eggShell,
+            backgroundColor: hunterGreen,
           },
-          headerTintColor: deepChestnut,
+          headerTintColor: androidGreen,
           headerTitleStyle: {
             fontWeight: 'bold',
           },

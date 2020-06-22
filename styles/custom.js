@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-
+import {androidGreen} from './colors';
 export const Button = StyleSheet.create({
   box: {
     alignItems: "center",
@@ -10,5 +10,6 @@ export const Button = StyleSheet.create({
   },
   label: {
       fontSize:22,
+      color: androidGreen
   },
 });
