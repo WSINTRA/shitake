@@ -1,11 +1,18 @@
 import * as React from "react";
-import { View, Text, Button, Dimensions } from "react-native";
+import { View, Text, Image, } from "react-native";
 import CustomButton from '../custom-components/customButton';
-
-function Splash({ navigation }) {
+import splash from '../../assets/splash.png';
+import {hunterGreen, mayGreen} from '../../styles/colors';
+function Splash() {
   return (
     <View>
-      <Text>Welcome, login or signup?</Text>
+      <Image style={
+          {
+              height:500, 
+              width: 400,
+              marginTop: 10,
+              resizeMode: 'stretch',
+              alignSelf:'center'}} source={splash}/>
       <View
         style={{
           flexDirection: "row",
@@ -15,17 +22,9 @@ function Splash({ navigation }) {
           width:"100%",
         }}
       >
-        <CustomButton title="Login" route="Login" color="coral" width="50%"/> 
-        <CustomButton title="Signup" route="Signup" color="gold" width="50%"/>
-        {/* <Button
-          title="Login"
-          style={[{borderRadius: 5,}]}
-          onPress={() => navigation.navigate("Login")}
-        />
-        <Button
-          title="Signup"
-          onPress={() => navigation.navigate("Signup")}
-        /> */}
+        <CustomButton title="Login" route="Login" color={hunterGreen} width="45%"/> 
+        <CustomButton title="Signup" route="Signup" color={mayGreen}width="45%"/>
+      
       </View>
     </View>
   );
