@@ -2,12 +2,16 @@ import React, { useState } from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import Login from "./login";
 import Signup from "./signup";
+import Splash from './splash';
 
-const Welcome = (props) => {
+const NavRoot = (props) => {
   //   const [switchForm, setSwitchFrom] = useState(false);
   const Stack = createStackNavigator();
   return (
-    <Stack.Navigator>
+    <Stack.Navigator initialRouteName="Splash">
+        <Stack.Screen name="Splash">
+          {(props) => <Splash {...props} />}
+        </Stack.Screen>
         <Stack.Screen name="Login">
           {(props) => <Login {...props} />}
         </Stack.Screen>
@@ -17,4 +21,4 @@ const Welcome = (props) => {
     </Stack.Navigator>
   );
 };
-export default Welcome;
+export default NavRoot;
