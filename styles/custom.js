@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import {androidGreen} from './colors';
+import {androidGreen, charCoal} from './colors';
 export const Button = StyleSheet.create({
   box: {
     alignItems: "center",
@@ -7,6 +7,10 @@ export const Button = StyleSheet.create({
     justifyContent: "center",
     borderRadius: 3,
     margin:10,
+    shadowColor: charCoal,
+    shadowOffset: {width: 0, height: 2},
+    shadowOpacity: 0.8,
+    shadowRadius: 2,
   },
   label: {
       fontSize:22,
