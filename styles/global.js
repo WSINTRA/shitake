@@ -9,6 +9,6 @@ export const WelcomeStyle = StyleSheet.create({
     backgroundColor: eggShell,
     height: screenHeight,
     flex: 1,
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
 });

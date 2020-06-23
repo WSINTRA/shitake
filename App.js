@@ -21,9 +21,9 @@ function App() {
         {authenticated ? 
         <HomeScreen/> 
         : 
-        <View style={WelcomeStyle.container}>
+        
         <NavRoot/> 
-        </View>
+
         }
     </NavigationContainer>
   );

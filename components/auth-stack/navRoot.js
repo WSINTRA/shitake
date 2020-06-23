@@ -8,17 +8,11 @@ const NavRoot = (props) => {
   //   const [switchForm, setSwitchFrom] = useState(false);
   const Stack = createStackNavigator();
   return (
-    <Stack.Navigator initialRouteName="Splash">
-        <Stack.Screen name="Splash" options={{
-          title: 'codename:Shitake',
-          headerStyle: {
-            backgroundColor: hunterGreen,
-          },
-          headerTintColor: androidGreen,
-          headerTitleStyle: {
-            fontWeight: 'bold',
-          },
-        }}>
+    <Stack.Navigator initialRouteName="Splash"  >
+        <Stack.Screen 
+        name="Splash" 
+        options={ {headerShown:false} }
+        >
           {(props) => <Splash {...props} />}
         </Stack.Screen>
         <Stack.Screen name="Login">

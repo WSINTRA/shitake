@@ -5,7 +5,7 @@ export const Button = StyleSheet.create({
     alignItems: "center",
     height: 55,
     justifyContent: "center",
-    borderRadius: 3,
+    borderRadius: 20,
     margin:10,
     shadowColor: charCoal,
     shadowOffset: {width: 0, height: 2},
@@ -14,6 +14,10 @@ export const Button = StyleSheet.create({
   },
   label: {
       fontSize:22,
-      color: androidGreen
+      color: androidGreen,
+      fontFamily: "GillSans-SemiBold",
+      //http://iosfonts.com/
+      fontWeight: "800",
+      textTransform: 'uppercase'
   },
 });

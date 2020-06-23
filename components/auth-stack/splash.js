@@ -1,32 +1,30 @@
 import * as React from "react";
-import { View, Text, Image, } from "react-native";
+import { View, ImageBackground, Image, Dimensions} from "react-native";
 import CustomButton from '../custom-components/customButton';
 import splash from '../../assets/splash.png';
 import {hunterGreen, mayGreen} from '../../styles/colors';
+import {WelcomeStyle } from '../../styles/global'
+const screenHeight = Math.round(Dimensions.get("window").height);
 function Splash() {
   return (
-    <View>
-      <Image style={
-          {
-              height:500, 
-              width: 400,
-              marginTop: 10,
-              resizeMode: 'stretch',
-              alignSelf:'center'}} source={splash}/>
+    
+    <View style={WelcomeStyle.container}>
+     <ImageBackground style={{ height: screenHeight, resizeMode: "center",}} source={splash}>
       <View
         style={{
-          flexDirection: "row",
-          alignItems: "stretch",
-          justifyContent: 'space-around',
-          alignContent: 'stretch',
-          width:"100%",
+          flex: 1,
+          justifyContent: 'flex-end',
         }}
       >
-        <CustomButton title="Login" route="Login" color={hunterGreen} width="45%"/> 
-        <CustomButton title="Signup" route="Signup" color={mayGreen}width="45%"/>
+        <View style={{flexDirection: 'row'}}>
+        <CustomButton title="Login" route="Login" color={hunterGreen} width="45%" /> 
+        <CustomButton title="Signup" route="Signup" color={mayGreen}width="45%" />
+        </View>
       
       </View>
+      </ImageBackground>
     </View>
+   
   );
 }
 export default Splash;
