@@ -1,10 +1,10 @@
 import * as React from "react";
-import { View, ImageBackground, Image, Dimensions} from "react-native";
+import { View, ImageBackground, Dimensions} from "react-native";
 import CustomButton from '../custom-components/customButton';
 import splash from '../../assets/splash.png';
 import {hunterGreen, mayGreen} from '../../styles/colors';
-import {WelcomeStyle } from '../../styles/global'
-const screenHeight = Math.round(Dimensions.get("window").height);
+import {WelcomeStyle, screenHeight } from '../../styles/global'
+
 function Splash() {
   return (
     
@@ -16,15 +16,14 @@ function Splash() {
           justifyContent: 'flex-end',
         }}
       >
-        <View style={{flexDirection: 'row'}}>
-        <CustomButton title="Login" route="Login" color={hunterGreen} width="45%" /> 
-        <CustomButton title="Signup" route="Signup" color={mayGreen}width="45%" />
+        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+        <CustomButton title="Login" route="Login" color={hunterGreen} width="40%" /> 
+        <CustomButton title="Signup" route="Signup" color={mayGreen}width="40%" />
         </View>
-      
+
       </View>
       </ImageBackground>
     </View>
-   
   );
 }
 export default Splash;

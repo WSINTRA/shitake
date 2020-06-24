@@ -8,14 +8,18 @@ const NavRoot = (props) => {
   //   const [switchForm, setSwitchFrom] = useState(false);
   const Stack = createStackNavigator();
   return (
-    <Stack.Navigator initialRouteName="Splash"  >
+    <Stack.Navigator initialRouteName="Splash" 
+    screenOptions={ {headerTransparent:true, headerTintColor:deepChestnut }}
+    >
         <Stack.Screen 
         name="Splash" 
         options={ {headerShown:false} }
         >
           {(props) => <Splash {...props} />}
         </Stack.Screen>
-        <Stack.Screen name="Login">
+        <Stack.Screen 
+        options={{headerBackTitle:"Welcome"}}
+        name="Login">
           {(props) => <Login {...props} />}
         </Stack.Screen>
         <Stack.Screen name="Signup">
