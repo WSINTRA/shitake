@@ -26,12 +26,14 @@ const Login = () => {
         behavior={Platform.OS == "ios" ? "padding" : "height"}
         style={{ flex: 1 }}
       >
+        
         <View style={WelcomeStyle.loginFormWrapper}>
+        <Text>Fresh gourmet, bespoke culinary mushrooms<br/>delivered fresh from the farm</Text>
         <View style={WelcomeStyle.inputWrapper}>
         <Icon name="user" size={22}/>
             <TextInput 
             inlineImageLeft='search_icon'
-            style={WelcomeStyle.input} placeholder="Email" />
+            style={WelcomeStyle.input} placeholder="Email address" />
            </View>
    
            <View style={WelcomeStyle.inputWrapper}>
