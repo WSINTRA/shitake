@@ -11,7 +11,7 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/FungiSplash-01.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },

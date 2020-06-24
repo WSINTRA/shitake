@@ -1,32 +1,28 @@
 import * as React from "react";
-import { View, Text, Button, Dimensions } from "react-native";
+import { View, ImageBackground, Dimensions} from "react-native";
 import CustomButton from '../custom-components/customButton';
+import splash from '../../assets/splash.png';
+import {hunterGreen, mayGreen} from '../../styles/colors';
+import {WelcomeStyle, screenHeight } from '../../styles/global'
 
-function Splash({ navigation }) {
+function Splash() {
   return (
-    <View>
-      <Text>Welcome, login or signup?</Text>
+    
+    <View style={WelcomeStyle.container}>
+     <ImageBackground style={{ height: screenHeight, resizeMode: "center",}} source={splash}>
       <View
         style={{
-          flexDirection: "row",
-          alignItems: "stretch",
-          justifyContent: 'space-around',
-          alignContent: 'stretch',
-          width:"100%",
+          flex: 1,
+          justifyContent: 'flex-end',
         }}
       >
-        <CustomButton title="Login" route="Login" color="coral" width="50%"/> 
-        <CustomButton title="Signup" route="Signup" color="gold" width="50%"/>
-        {/* <Button
-          title="Login"
-          style={[{borderRadius: 5,}]}
-          onPress={() => navigation.navigate("Login")}
-        />
-        <Button
-          title="Signup"
-          onPress={() => navigation.navigate("Signup")}
-        /> */}
+        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+        <CustomButton title="Login" route="Login" color={hunterGreen} width="40%" /> 
+        <CustomButton title="Signup" route="Signup" color={mayGreen}width="40%" />
+        </View>
+
       </View>
+      </ImageBackground>
     </View>
   );
 }
