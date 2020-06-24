@@ -16,6 +16,7 @@ import { eggShell, hunterGreen } from "../../styles/colors";
 const Login = () => {
   return (
     <ImageBackground
+      blurRadius={90}
       style={{ height: screenHeight, resizeMode: "center" }}
       source={splash}
     >
@@ -59,7 +60,8 @@ const s = StyleSheet.create({
     bottom: 0,
     left: 0,
     backgroundColor: eggShell,
-    opacity: 0.9,
+    opacity: 0.3,
+
   },
 });
 export default Login;

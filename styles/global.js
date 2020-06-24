@@ -32,7 +32,8 @@ export const WelcomeStyle = StyleSheet.create({
     shadowOffset: { width: 5, height: 5 },
     shadowColor: charCoal,
     shadowOpacity: 0.5,
-    
+    opacity:0.5
+
   },
   input: {
     paddingLeft:20,
