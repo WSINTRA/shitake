@@ -23,18 +23,18 @@ const Signup = () => {
         style={{ flex: 1 }}
       >
         <View style={WelcomeStyle.loginFormWrapper}>
-        <View style={WelcomeStyle.inputWrapper}>
+        <View style={[WelcomeStyle.inputWrapper, {opacity:1}]}>
         <Icon name="user" size={22}/>
             <TextInput 
             inlineImageLeft='search_icon'
             style={WelcomeStyle.input} placeholder="Email" />
            </View>
    
-           <View style={WelcomeStyle.inputWrapper}>
+           <View style={[WelcomeStyle.inputWrapper, {opacity:1}]}  >
             <Icon name="lock" size={22}/>
             <TextInput style={WelcomeStyle.input} placeholder="Password" />
             </View>
-            <View style={WelcomeStyle.inputWrapper}>
+            <View style={[WelcomeStyle.inputWrapper, {opacity:1}]}>
             <Icon name="lock" size={22}/>
             <TextInput style={WelcomeStyle.input} placeholder="Confirm Password" />
             </View>
@@ -52,7 +52,7 @@ const s = StyleSheet.create({
       bottom: 0,
       left: 0,
       backgroundColor: eggShell,
-      opacity: 0.3,
+      opacity: 0.45,
     },
   });
 export default Signup;
