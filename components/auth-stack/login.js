@@ -61,6 +61,7 @@ const s = StyleSheet.create({
     left: 0,
     backgroundColor: eggShell,
     opacity: 0.3,
+
   },
 });
 export default Login;

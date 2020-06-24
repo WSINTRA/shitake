@@ -33,6 +33,7 @@ export const WelcomeStyle = StyleSheet.create({
     shadowColor: charCoal,
     shadowOpacity: 0.5,
     opacity:0.5
+
   },
   input: {
     paddingLeft:20,
