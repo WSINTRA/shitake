@@ -1,30 +1,14 @@
-import React, { useState } from 'react';
-import { View, Text} from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { WelcomeStyle } from "./styles/global";
-import NavRoot from './components/auth-stack/navRoot';
-
-
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen</Text>
-    </View>
-  );
-}
+import React, { useState } from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import NavRoot from "./components/auth-stack/navRoot";
+import LandingRoot from "./components/user-stack/landingRoot";
 
 function App() {
-  const [authenticated, setAuthenticated] = useState(false);
+  const [authenticated, setAuthenticated] = useState(true);
 
   return (
     <NavigationContainer>
-        {authenticated ? 
-        <HomeScreen/> 
-        : 
-        
-        <NavRoot/> 
-
-        }
+      {authenticated ? <LandingRoot /> : <NavRoot />}
     </NavigationContainer>
   );
 }
