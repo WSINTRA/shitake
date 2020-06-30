@@ -3,7 +3,8 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import HomeScreen from './homeScreen';
 
 const Drawer = createDrawerNavigator();
-
+//Its a stack nav, inside of a tab nav, inside of a drawer nav !!!!
+//This is the outer layer, the drawer
 function LandingRoot() {
   return (
     
@@ -15,4 +16,3 @@ function LandingRoot() {
   );
 }
 export default LandingRoot;
-// its a stack nav, inside of a tab nav, inside of a drawer nav !!!!
