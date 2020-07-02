@@ -2,9 +2,9 @@ var faker = require('faker');
 
 let numberOfTags = 5;
 let numberOfProducts = 10;
-
+let numberOfExtraImages = 3;
 class product{
-    constructor(title, subHeading, tags, description, availability,pricePerWeight,itemCode){
+    constructor(title, subHeading, tags, description, availability,pricePerWeight,itemCode, mainImg, extraImg){
         this.title = title
         this.subHeading = subHeading
         this.tags = tags
@@ -12,7 +12,16 @@ class product{
         this.availability = availability
         this.pricePerWeight = pricePerWeight
         this.itemCode = itemCode
+        this.mainImg = mainImg
+        this.extraImages = extraImg
     }
+}
+const createExtraImages=()=>{
+    let extraImg = [];
+    for(let i=0; i< numberOfExtraImages; i++){
+        extraImg.push(faker.image.food(200,200))
+    }
+    return extraImg;
 }
 const createTags=()=>{
     let tags = [];
@@ -30,10 +39,12 @@ export const createFakeData=()=>{
             faker.commerce.productName(),
             faker.company.bsBuzz(),
             createTags(),
-            faker.commerce.product(),
+            faker.lorem.sentences(),
             faker.random.boolean(),
             faker.random.number(23),
-            faker.finance.iban() 
+            faker.finance.iban(),
+            faker.image.nature(300,300),
+            createExtraImages()
             ) 
         )
     }
