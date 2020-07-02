@@ -1,14 +1,29 @@
 import * as React from "react";
-import { View, Text } from "react-native";
+import { View, Text, FlatList, } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import { createFakeData } from '../../data'
+
+function Item({ title }) {
+  return (
+    <View >
+      <Text>{title}</Text>
+    </View>
+  );
+}
 
 //TODO: Rename this component
 function Main() {
   const navigation = useNavigation();
+  console.log(createFakeData())
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
       <Text onPress={() => navigation.openDrawer()}>Home Screen</Text>
+      <FlatList 
+      data={createFakeData()}
+      renderItem={({ item }) => <Item title={item.title} />}
+      keyExtractor={item => item.itemCode}
+      />
     </View>
   );
 }
@@ -18,7 +33,7 @@ function Products() {
   const Stack = createStackNavigator();
   return (
     <Stack.Navigator>
-      <Stack.Screen options={{}} name="Products">
+      <Stack.Screen options={{}} name="codename:Shitake">
         {(props) => <Main {...props} />}
       </Stack.Screen>
     </Stack.Navigator>
